@@ -68,15 +68,15 @@ def findSnarePosition(snareFilename,drumloopFilename):
     z=crossCorr(x,y)
     #x, y, z, lags = runCorrelation(snareFilename, drumloopFilename)
     lags=np.arange(-len(x),len(y)-1)
-    snarePositionList=[]
+    pos=[]
     #find the local maxima above a fixed threshold, identify corresponding sample numbers in drum loop file
     for i in range (1,len(z)-1):
         if (z[i-1] < z[i]) & (z[i] > z[i+1]) & (z[i] > 100):
-            snarePositionList.append(-lags[i]+len(y))
-    snarePositionList.sort()
+            pos.append(-lags[i]+len(y))
+    pos.sort()
    # print(type(snarePositionList))
-    np.savetxt('results/02-snareLocation.txt', snarePositionList, fmt='%i')
-    return snarePositionList
+    np.savetxt('results/02-snareLocation.txt', pos, fmt='%i')
+    return pos
     
 
 
