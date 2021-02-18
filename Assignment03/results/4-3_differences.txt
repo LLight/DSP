@@ -1,0 +1,1 @@
+Using the hanning window produces a spectrogram with more clearly defined frequency bands, compared to the rectangular window.

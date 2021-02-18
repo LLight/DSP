@@ -1,0 +1,5 @@
+3.4
+The frequency resolution is 2 Hz
+
+3.5
+The signal will be twice as long while holding the sample rate constant, so the resolution will increase to 1.0 Hz. 
